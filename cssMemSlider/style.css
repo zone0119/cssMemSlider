@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Guardians;
+    src: url('./Guardians.ttf');
+}
+
+body {
+    background-color: rgb(2,2,129);
+    color: rgb(229, 115, 69);
+    font-family: Guardians;
+    font-size: 1.5rem;
+}
+
+
