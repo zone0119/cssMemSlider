@@ -7,7 +7,190 @@ body {
     background-color: rgb(2,2,129);
     color: rgb(229, 115, 69);
     font-family: Guardians;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
+    
+}
+
+.container {
+    margin: 0 auto;
+    width: 52.6rem;
+    border: 1rem solid rgb(91,154,204);
+    border-radius:  2rem;
+}
+
+.main-slider-container {
+    max-width: 100%;
+    margin: 2rem;
+}
+
+.img-box {
+    text-align: center;
+    border: 0.3rem solid rgb(255, 255, 255);
+    border-radius:  1rem;
+    
+}
+.img-box img { 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-dots .nav {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    width: 0;
+    height: 0;
+}
+
+.dot {
+    cursor:pointer;
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+.dot:hover {
+    color:white;
+}
+@media only screen and (max-width: 768px) {
+    .img-box  {
+        border: 0.3rem solid rgb(218, 0, 0);
+    }
 }
 
 
+@media only screen and (min-width: 769px) and (max-width: 1920px) {
+
+
+    .main-slider-container {
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        overflow: hidden;
+    }
+
+    .img-container {
+        flex-basis: 100%;        
+        display: flex;
+        flex-wrap: no-wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        overflow: hidden;
+        width: 55rem;
+        background-color:white;
+    }
+
+    .img-box  {
+        border: 0.3rem solid rgb(255, 255, 255);      
+        
+    }    
+    .img-box  img {
+        width: 48rem;
+        height: 24.563rem;
+    }
+    .text-container-out {
+        width: 70%;
+        flex-basis: 70%;  
+    }
+    .text-container {
+        flex-basis: 100%;        
+        display: flex;
+        flex-wrap: no-wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        width: calc(100% * 4);
+        
+    }
+    .text {
+        width: 48rem;
+        border:1px solid red;
+        height: 10rem;
+        overflow: hidden;
+    }
+
+    .slider-dots {
+        flex-basis: 30%;  
+        background-color: aqua;
+        z-index: 99;
+     
+
+    }
+
+    .nav {
+        display: flex;
+        align-items: flex-end;
+    }
+    
+
+
+    #roll1:checked ~ .container .main-slider-container .img-container .img-box,
+    #roll1:checked ~ .container .text-container-out .text-container .text {        
+        background-color: brown;
+    }
+
+    #roll1:checked ~ .container .main-slider-container .img-container .img1,
+    #roll1:checked ~ .container .text-container-out .text-container .text1 {        
+        width: 48rem;
+        height: 100%;
+        background-color: brown;
+    }
+
+    #roll2:checked ~ .container .main-slider-container .img-container .img2,
+    #roll2:checked ~ .container .text-container-out .text-container .text2 {        
+        width: 48rem;
+        height: 100%;
+        background-color: rgb(226, 190, 31);
+    }
+
+    #roll3:checked ~ .container .main-slider-container .img-container .img3,
+    #roll3:checked ~ .container .text-container-out .text-container .text3 {        
+        width: 48rem;
+        height: 100%;
+        background-color: rgb(31, 226, 31);
+    }
+    
+    #roll4:checked ~ .container .main-slider-container .img-container .img4,
+    #roll4:checked ~ .container .text-container-out .text-container .text4 {        
+        width: 48rem;
+        height: 100%;
+        background-color: rgb(31, 109, 226);
+    }
+    .container .main-slider-container .img-container .img-box,
+    .container .text-container-out .text-container .text {        
+        width: 0;
+        height: 0;
+        border: 0;
+        transition: width 2s;
+    }
+    
+
+
+
+    #roll1:checked ~ .container .nav label:nth-child(1)   {        
+        color: white;
+        border:1px solid white;
+        background-color:black;
+    }
+
+    
+    #roll2:checked ~ .container .nav label:nth-child(2)   {        
+        color: white;
+        border:1px solid white;
+        background-color:black;
+    }
+
+        
+    #roll3:checked ~ .container .nav label:nth-child(3)   {        
+        color: white;
+        border:1px solid white;
+        background-color:black;
+    }
+
+            
+    #roll4:checked ~ .container .nav label:nth-child(4)   {         
+        color: white;
+        border:1px solid white;
+        background-color:black;
+    }
+}
